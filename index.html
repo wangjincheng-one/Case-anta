@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,126 @@
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <style>
+        a {
+            text-decoration: none;
+
+        }
+        li{
+            list-style: none;
+        }
+
+        header {
+
+            width: 100%;
+            height: 49px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        header div {
+            height: 49px;
+            float: right;
+            color:#999;
+            line-height: 49px;
+        }
+        header div a{
+            color:#999
+        }
+        nav{
+            height: 100px;
+            
+            line-height: 100px;
+        }
+       
+        nav ul {
+            
+            display: flex;
+            line-height: 100px;
+            /* ;align-items: center;justify-content: space-around; */
+        }
+        nav ul .loading{
+            padding-right: 102px;
+            padding-left: 180px;
+        }
+        nav ul li{
+            padding-right: 54px;
+        }
+        img {
+            width: 100%;
+        }
+       
+        nav div{
+            float: left;
+        }
+        nav ul {
+            float: left;
+
+        }
+        nav ul li a{
+            color: #000;font-size: 18px;font-weight: bold;
+        }
+        nav div .loading{
+            width: 54px;
+            height: 31px;
+        }
+        h3 {
+            height: 50px;
+            background-image: url(https://anta-cn-web.obs.myhwclouds.com/text-something.svg);
+        }
     </style>
 </head>
+
 <body>
-    <div class="container-fluid head_anta">
+    <!-- <div class="container-fluid head_anta">
         <div class="row">
             <div class="col-lg-9"></div>
-            <div class="col-lg-3">登录注册</div>
-
+            <div class="col-lg-3"><a href="">登录</a>&nbsp;或&nbsp;<a href="">注册</a>
+            </div>
         </div>
     </div>
-    <div class="container-fluid">导航</div>
+    <div class="container-fluid">导航</div> -->
+    <!--头部  -->
+    <header>
+        <div>
+            <a href="">登录</a>&nbsp;或&nbsp;<a href="">注册</a>&nbsp;ANTA会员
+            <a href="" class="">1</a>
+            <a href="" class="">2</a>
+        </div>
+    </header>
+    <!--导航部分  -->
+
+    <nav>
+        <div>
+         <img src="./img/logo.gif" alt="" class="loading">
+        </div>
+        <ul>
+            <li><a href="">男子</a>
+                <div>
+
+                </div>
+
+            </li>
+            <li><a href="">女子</a></li>
+            <li><a href="">儿童</a></li>
+            <li><a href="">安踏儿童</a></li>
+            <li><a href="">品牌文化</a></li>
+            <li><a href="">观赏视频</a></li>
+            <li><a href="">联系我们</a></li>
+<li><input type="text" placeholder="搜索"></li>
+        </ul>
+        
+    </nav>
+
+    <!-- <img src="./img/t2.jpg" alt="">
+    <img original="https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2020/0113/index-03-bg.jpg" alt=""
+        class="loading" src="https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2020/0113/index-03-bg.jpg"
+        style="display: inline;"> -->
 </body>
+<h3>
+    span
+</h3>
+<!-- 回到顶部 -->
+<div id="getTop"><a href="">返回顶部</a>
+    <a href="">购物车</a>
+    <a href="">客服</a></div>
+
 </html>
