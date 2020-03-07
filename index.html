@@ -7,129 +7,552 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>【安踏官方商城】-永不止步Keep Moving</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../swiper.min.css">
     <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <!-- <script src="../js/bootstrap.min.js"></script> -->
     <style>
+        .body{
+            width: 1583px;
+        }
         a {
             text-decoration: none;
 
         }
-        li{
+
+        li {
             list-style: none;
         }
 
         header {
-
-            width: 100%;
-            height: 49px;
-            border-bottom: 1px solid #ccc;
+            height: 150px;
         }
 
-        header div {
-            height: 49px;
+        .header-top {
+            height: 50px;
+            color: #999;
+            box-sizing: border-box;
+            padding-right: 70px;
+            
+        
+        }
+        .header-top .right{
             float: right;
-            color:#999;
+            height: 50px;
+            
             line-height: 49px;
         }
-        header div a{
-            color:#999
-        }
-        nav{
-            height: 100px;
-            
-            line-height: 100px;
-        }
-       
-        nav ul {
-            
-            display: flex;
-            line-height: 100px;
-            /* ;align-items: center;justify-content: space-around; */
-        }
-        nav ul .loading{
-            padding-right: 102px;
-            padding-left: 180px;
-        }
-        nav ul li{
-            padding-right: 54px;
-        }
-        img {
-            width: 100%;
-        }
-       
-        nav div{
-            float: left;
-        }
-        nav ul {
-            float: left;
 
+        .header-top .topbar-user {
+            display: inline-block;margin-right: 30px; 
+            line-height: 49px;height: 49px;
+            box-sizing: border-box;
+            vertical-align: top;
         }
-        nav ul li a{
-            color: #000;font-size: 18px;font-weight: bold;
+
+        .header-top .topbar-user a {
+            color: #a5a5a5;
+            display: inline-block;
         }
-        nav div .loading{
-            width: 54px;
-            height: 31px;
+        .header-top .topbar-cart{
+            display: inline-block;
+            margin-right: 30px;
+            width: 20px;
+            height: 20px;
+            background: url(../res/img/header-server.svg);
         }
+        .topbar-service{
+            display: inline-block;
+            width: 20px;
+            margin-top: 18px;
+            height: 20px;
+            background: url(../res/img/header-cart.svg);
+        }
+/* 导航 */
+        .header-nav {
+            
+            height: 100px;
+            line-height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            border-top: 1px solid #ccc;
+        }
+
+        /* 
         h3 {
             height: 50px;
             background-image: url(https://anta-cn-web.obs.myhwclouds.com/text-something.svg);
+        } */
+        .header-nav a img {
+            width: 53px;
+            height: 29px;
         }
-    </style>
+
+        .header-nav ul li {
+            float: left;
+            font-size: 18px;
+            font-weight: bolder;
+            margin: 0 25px;
+        }
+        .header-nav ul .last{
+            text-align: center;
+        }
+       
+        .header-nav ul li a {
+            color: #000000;
+        }
+        .nav-search-box{
+        margin-top: 0;
+        width: 212px;
+        height: 40px;
+        line-height: 26px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        vertical-align: middle;
+        display: inline-block;
+        padding: 6px 0;
+        box-sizing: border-box;
+        }          
+        .nav-search-box .nav-search-btn  {
+            width: 46px;
+            height: 26px;
+            
+            display: inline-block;
+            background: url(../res/img/header-search.svg) no-repeat;
+            vertical-align: middle;
+            border-right: 1px solid #ccc;
+        }
+        .nav-search-box .nav-search-input{
+            width: 150px;
+            height: 26px;
+            border: none;
+            font-weight: normal;
+        }
+        .swiper-wrapper img{
+            width: 100%;
+        }
+        /* 小圆点 */
+        .swiper-pagination{
+          position: absolute;
+          left: 50%;
+            
+            height: 50px;
+            width: 200p;
+            margin-left: -80px;
+        }
+        .swiper-pagination span{
+            width: 10px;
+            height: 10px;
+            margin: 18px 8px 0 8px;
+        }
+        .main{
+            margin-top: 50px;
+            background-color: #0c1011;
+        }
+        .main div:nth-of-type(1){
+            height: 300px;
+            width: 100%;
+            background: url(../res/img/t2.jpg) no-repeat;
+        }
+        /* .main div:nth-of-type(1) img{
+            width: 100%;
+        } */
+        .main div:nth-of-type(2){
+            height: 670px;
+            width: 100%;
+            background: url(../res/img/t2-last.jpg) no-repeat;
+           
+        }
+        .main div:nth-of-type(2) .stars{
+            padding-top: 50px;
+            /* position: absolute; */
+            height: 576px;
+            width: 1200px;
+            padding-left: 0;
+            margin: 0 auto;
+        }
+        .main div:nth-of-type(2) .stars li {
+            float: left;
+            width: 300px;height: 578px;
+        }
+        .main div:nth-of-type(2) .stars li  img{
+        width: 100%;
+        height: 100%;
+        }
+        .main div:nth-of-type(3) {
+            height: 961px;
+            width: 100%;
+        }
+        .main   div:nth-of-type(3) h3{
+            width: 1200px;
+            height: 55px;
+            background-color: #0c1011;
+            margin :0 auto;
+        }
+        .main   div:nth-of-type(3) h3 .textLogo{
+            float: right;
+            display: block;
+            height: 55px;
+        }
+        /* .main div:nth-of-type(3) h3 .textLogo img{
+            /* width: 314px;
+            height: 27px; */
+     
+        .main   div:nth-of-type(3) h3 .bkLogo{
+            display: block;
+            float: left;
+            background: url(https://anta-cn-web.obs.myhwclouds.com/theme/images/antacom/text-something.svg) no-repeat;
+            /* background:  #f00; */
+            height: 55px;
+            width: 630px;
+        }
+        /*  */
+        .main   div:nth-of-type(3) .stars2{
+            width: 1200px;
+            margin: 0 auto;
+            
+        }
+/*modelbox 区域           */
+        .main .model-box{
+            height: 806px;
+            width:1200px ;
+            background-color: #fff;
+            margin: 0 auto;
+        }
+        .main .model-box ul{
+width: 1160px;
+height: 706px;
+margin: 0 auto;
+padding-left: 0;
+        }
+        .main .model-box ul li:nth-of-type(1){
+            width: 289px;
+            height: 692px;
+
+        }
+        .main .model-box ul li:nth-of-type(1) img{
+            width: 289px;
+            height: 692px;
+        }
+        .main .model-box ul li{
+            float: left;
+            width: 256px;
+            height: 310px;
+            background-color: #fff;
+            margin: 0 15px;
+        }
+        .main .model-box ul li img{
+            width: 255px;
+            height: 255px;
+        }
+        .main .model-box ul li div{
+            width: 285px;
+            height: 345px;
+        }
+        .main .model-box ul li div a{
+            width: 285px;
+            height: 30px;
+            line-height: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #000;
+            
+
+        }
+        .main .model-box ul li div .goods-name{
+            overflow: hidden;
+            
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .main .model-box .loading-line{
+            background: url(https://anta-cn-web.obs.myhwclouds.com/theme/images/icons/line-dashed.svg) no-repeat;
+            width: 1200px;
+            height: 60px;
+        }
+        /* overflow: hidden;
+
+text-overflow: ellipsis;
+
+white-space: nowrap; */
+        /* footer*/
+.footer{
+   height: 170px;
+   background-color: #000000;
+   padding-top: 50px;
+   text-align: left;
+   margin-top: 1000px;
+   position: relative;
+}
+.footer .ft-main{
+   float: right;
+   display: flex;
+   flex-direction: column;
+   padding-right: 138px;
+}
+.footer .ft-slogan{
+float: left;
+padding-left: 35px;
+}
+.footer .ft-slogan img{
+   width: 250px;
+   height: 96px;
+}
+.footer .links-line{
+    padding-left: 0;
+}
+.footer .links-line li{
+   float: left;
+   border-right: 1px solid #fff;
+   margin: 0 15px 0 0 ;
+   padding-right: 15px;
+}
+.footer .links-line .last-one{
+    border: none}
+
+
+.footer .links-line li a{
+    color: #fff;
+    cursor: pointer;
+
+}
+.footer .ft-company span {
+    color: #fff;
+}
+.footer .ft-company a{
+    color: #fff;
+    cursor: pointer;
+
+}
+.footer .links-line li a:hover{
+    text-decoration: none;
+
+}
+.footer .ft-company a:hover{
+    text-decoration: none;
+}
+.ft-company{
+    margin-bottom: 40px;
+}
+ </style>
 </head>
 
 <body>
-    <!-- <div class="container-fluid head_anta">
-        <div class="row">
-            <div class="col-lg-9"></div>
-            <div class="col-lg-3"><a href="">登录</a>&nbsp;或&nbsp;<a href="">注册</a>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">导航</div> -->
+
     <!--头部  -->
-    <header>
-        <div>
-            <a href="">登录</a>&nbsp;或&nbsp;<a href="">注册</a>&nbsp;ANTA会员
-            <a href="" class="">1</a>
-            <a href="" class="">2</a>
+    <header class="header">
+        <div class="header-top">
+            <div class="right">
+                    <div class="topbar-user">
+                            <a href="" title="登入">登入</a>&nbsp;或&nbsp;<a href="/antacom/passport/reg" title="注册">注册</a>&nbsp;ANTA会员
+                        </div>
+                        <div class="topbar-cart"><a href="" class="topbar-icon" title="购物车"></a><i></i></div>
+                        <div class="topbar-service">
+                            <a herf="" class="topbar-icon" title="在线客服"></a>
+                        </div>
+            </div>
+            
         </div>
-    </header>
-    <!--导航部分  -->
-
-    <nav>
-        <div>
-         <img src="./img/logo.gif" alt="" class="loading">
-        </div>
-        <ul>
-            <li><a href="">男子</a>
-                <div>
-
+<!--导航部分  -->
+        <div class="header-nav w-full clearfix">
+            <div class="header-logo fl J_head_logo" style="margin-left: 35px;">
+                <div class="logo-inner">
+                    <a href="">
+                        <img src="https://anta-cn-web.obs.myhwclouds.com/theme/images/logo/logo-anta-r-02.svg" alt=""
+                            class="loading">
+                    </a>
                 </div>
+            </div>   
+            <ul class="nav-list fr">
+              <li class="nav-item first" data-type="man">
+                            <a href="" target="_blank" title="男子">男子</a>
 
+             </li>
+             <li class="nav-item" data-type="woman">
+                            <a href="" target="_blank" title="女子">女子</a>
+                            <!-- 女子二级导航内容 -->
+             </li>
+             <li class="nav-item" data-type="kids">
+                 <a href="" target="_blank" title="儿童">儿童</a>
+             </li>
+             <li class="nav-item" ><a href="" target="_blank"
+                                title="安踏儿童">安踏儿童</a></li>
+             <li class="nav-item"><a href="" target="_blank"
+                                title="品牌文化">品牌文化</a></li>
+             <li class="nav-item" ><a href="" target="_blank"
+                                title="观赏视频">观赏视频</a></li>
+            <li class="nav-item" ><a href="" target="_blank"
+                                title="联系我们">联系我们</a></li>
+            <li class="nav-item last">
+                <div class="nav-search-box">
+                    <a class="nav-search-btn" href="" title="搜索"></a>
+                    <input class="nav-search-input" type="text" placeholder="搜索" value="" id="search_box">
+                 </div>
             </li>
-            <li><a href="">女子</a></li>
-            <li><a href="">儿童</a></li>
-            <li><a href="">安踏儿童</a></li>
-            <li><a href="">品牌文化</a></li>
-            <li><a href="">观赏视频</a></li>
-            <li><a href="">联系我们</a></li>
-<li><input type="text" placeholder="搜索"></li>
         </ul>
-        
-    </nav>
+    </header>
 
-    <!-- <img src="./img/t2.jpg" alt="">
-    <img original="https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2020/0113/index-03-bg.jpg" alt=""
-        class="loading" src="https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2020/0113/index-03-bg.jpg"
-        style="display: inline;"> -->
+    <!--banner图部分  -->
+ <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../res/img/1-KT5.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="../res/img/2-paoxie.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="../res/img/3-xiuxian.jpg" alt=""></div>
+    </div>
+</div>
+<div class="swiper-pagination"></div> 
+
+<!-- main部分 -->
+<div class="main">
+    <div>
+        <!-- <img src="../res/img/t2.jpg" alt=""> -->
+    </div>
+    <div>
+        <!-- <img src="../res/img/t2-last.jpg" alt=""> -->
+        <ul class="stars">
+            <li><img src ="../res/img/t3.jpg">
+                <img src="https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2019/1226/index-0201-gxt-02.png" alt="" style="display: none;">
+            </li>
+            <li><img src ="../res/img/t4.jpg">
+                <img src="https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2019/1226/index-0202-cfy-02.png" alt=""style="display: none;">
+            </li>
+            <li><img src ="../res/img/t5.jpg">
+                <img src="https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2019/1226/index-0203-zjk-02.png" alt=""style="display: none;">
+            </li>
+            <li><img src ="../res/img/t6.jpg">
+                <img src="https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2019/1226/index-0204-kt-02.png" alt=""style="display: none;">
+            </li>
+            
+        </ul>
+    </div>
+    <div><h3>
+        <span class=".textLogo">
+            <img src="../res/img/t8.png" alt="">
+        </span>
+        <span class="bkLogo">
+            <img src="" alt="">
+        </span>
+    </h3>
+    <div class="model-box">
+        <div>
+        <ul>
+<li class="good-1"><img src="../res/img/t7.jpg" alt=""></li>
+<li>
+    <div>
+        <a href="" class="goods-picture"><img src="https://anta-cn-web.obs.myhwclouds.com/shopgoods/1/112015518/zt-112015518.jpg?x-image-process=image/resize,w_300,h_300" alt=""></a>
+        <a target="_blank" href="/goods-23415.html" class="goods-name ellipsis">安踏男跑鞋跑鞋跑鞋男A-CORE男子专区网面天启2020跑鞋</a>
+        <a href="" class="goods-price"><span>￥299.00</span></a>
+    </div>
+</li>
+<li>
+        <div>
+            <a href=""><img src="https://anta-cn-web.obs.myhwclouds.com/shopgoods/1/112015518/zt-112015518.jpg?x-image-process=image/resize,w_300,h_300" alt=""></a>
+            <a target="_blank" href="/goods-23415.html" class="goods-name ellipsis">安踏男跑鞋跑鞋跑鞋男A-CORE男子专区网面天启2020跑鞋</a>
+            <a href=""><span>￥299.00</span></a>
+        </div>
+    </li>
+    <li>
+            <div>
+                <a href=""><img src="https://anta-cn-web.obs.myhwclouds.com/shopgoods/1/112015518/zt-112015518.jpg?x-image-process=image/resize,w_300,h_300" alt=""></a>
+                <a target="_blank" href="/goods-23415.html" class="goods-name ellipsis">安踏男跑鞋跑鞋跑鞋男A-CORE男子专区网面天启2020跑鞋</a>
+                <a href=""><span>￥299.00</span></a>
+            </div>
+     </li>
+    <li>
+                <div>
+                    <a href=""><img src="https://anta-cn-web.obs.myhwclouds.com/shopgoods/1/112015518/zt-112015518.jpg?x-image-process=image/resize,w_300,h_300" alt=""></a>
+                    <a target="_blank" href="/goods-23415.html" class="goods-name ellipsis">安踏男跑鞋跑鞋跑鞋男A-CORE男子专区网面天启2020跑鞋</a>
+                    <a href=""><span>￥299.00</span></a>
+                </div>
+    </li>
+    <li>
+                    <div>
+                        <a href=""><img src="https://anta-cn-web.obs.myhwclouds.com/shopgoods/1/112015518/zt-112015518.jpg?x-image-process=image/resize,w_300,h_300" alt=""></a>
+                        <a target="_blank" href="/goods-23415.html" class="goods-name ellipsis">安踏男跑鞋跑鞋跑鞋男A-CORE男子专区网面天启2020跑鞋</a>
+                        <a href=""><span>￥299.00</span></a>
+                    </div>
+    </li>
+<li>
+     <div>
+        <a href=""><img src="https://anta-cn-web.obs.myhwclouds.com/shopgoods/1/112015518/zt-112015518.jpg?x-image-process=image/resize,w_300,h_300" alt=""></a>
+        <a target="_blank" href="/goods-23415.html" class="goods-name ellipsis">安踏男跑鞋跑鞋跑鞋男A-CORE男子专区网面天启2020跑鞋</a>
+        <a href=""><span>￥299.00</span></a>
+     </div>
+ </li>
+        </ul>
+        <div class="loading-line"> <a href="#">查看更多</a></div>
+
+    </div>
+    
+    </div>
+
+    <div class="main-ft"></div>
+</div>
+
+
+
+
+<!-- 底部部分 -->
+<footer class="footer footer-com w-full J_minicart_close">
+	
+	<div class="ft-slogan fl"><img src="https://anta-cn-web.obs.myhwclouds.com/theme/images/logo/slogan-anta-r.svg" alt=""></div>
+	<div class="ft-main fr">
+		<ul class="links-line ">
+			<li><a href="" target="_blank">安踏海外</a></li>
+			<li class="last-one"><a href="" target="_blank">安踏投资者关系</a></li>
+		</ul>
+		<div class="ft-company">
+					<span>Copyright(C) 2020 by www.ANTA.com</span>
+					<span>闽ICP备11020421号</span>
+					<span>©安踏体育用品有限公司版权所有</span>
+					<a target="_blank" href="">营业执照</a>
+					<a target="_blank" href="">开户许可证</a>
+		</div>
+		<ul class="links-line ">
+					<li><a href="" target="_blank">安踏儿童</a></li>
+					<li><a href="" target="_blank">Fila</a></li>
+					<li><a href="">Kolon Sport</a></li>
+					<li><a href="">Descente</a></li>
+					<li><a href="">Sprandi</a></li>
+					<li class="last-one"><a href="">Kingkow</a></li>
+		</ul>
+	</div>
+	
+</footer>
+
+
+
+    <!-- 回到顶部 -->
+    <!-- <div id="getTop"><a href="">返回顶部</a>
+        <a href="">购物车</a>
+        <a href="">客服</a>
+    </div> 
+    -->
+
+
+
 </body>
-<h3>
-    span
-</h3>
-<!-- 回到顶部 -->
-<div id="getTop"><a href="">返回顶部</a>
-    <a href="">购物车</a>
-    <a href="">客服</a></div>
+
+
+<!-- Swiper JS -->
+<script src="../swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+    });
+</script>
 
 </html>
