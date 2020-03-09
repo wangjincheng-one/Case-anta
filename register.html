@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>注册register</title>
+    <link rel="stylesheet" href="css/register.css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/register.js"></script>
 </head>
+
 <body>
-    
+    <div class="main">
+        <div class="main1">
+            <div class="top">
+                <!-- 分割************************************************************** -->
+                <div class="regType">
+                    <div class="regtype_inner">
+                            <a href="">手机注册</a>
+                            <a href="">邮箱注册</a>
+                    </div>
+                   
+                </div>
+                <!-- 分割************************************************************** -->
+
+            <form action="" id="reg_form">
+                <div class="regbox">
+                    <h5 class="n_tit_msg">请输入<span class="reg-type-name">手机号码</span>注册：</h5>
+                    <div class="inputbg">
+                        <!-- 错误添加class为err_label -->
+                        <label class="labelbox labelbox-user" for="user">
+                            <input type="text" name="username" id="user" autocomplete="off" placeholder="手机号码">
+                        </label>
+                    </div>
+                <!-- 分割************************************************************** -->
+
+                    <div class="inputbg inputcode dis_box" id="captcha">
+                        <label class="labelbox labelbox-captcha" for="">
+                            <input id="captcha-code" class="code" type="text" name="vcode" maxlength="4"
+                                placeholder="图片验证码" autocomplete="off">
+
+
+                        </label>
+                        
+                        <img src=""  class="chkcode_img icode_image code-image">
+                    </div>
+                <!-- 分割************************************************************** -->
+
+                    <div class="inputbg" id="agree">
+                        <label class="labelbox labelbox-agree">
+                            <input type="checkbox" name="agree" id="agree-check">
+                            <span>我已充分阅读、理解并接受</span><a href="">隐私政策</a><span>的全部内容</span>
+                        </label>
+                    </div>
+                <!-- 分割************************************************************** -->
+
+                    <div class="fixed_box">
+                        <input class="btn332 btn_reg_1" type="submit" id="submit_button" value="确认">
+                    </div>
+                </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
 </body>
+
 </html>
