@@ -1,0 +1,803 @@
+*{
+    margin: 0;padding: 0;
+}
+
+a{
+text-decoration: none;
+  }
+
+li{
+  list-style: none;
+}
+img{
+    vertical-align: middle;
+}
+
+
+/* header部分------------------------------------------------------------ */
+header {
+    height: 150px;
+    position: relative;
+}
+header .header-top{
+height: 50px;
+box-sizing: border-box;
+border-bottom: 1px solid #cccccc;
+padding-right: 70px;
+}
+.header-top .right{
+    float: right;
+    height: 50px;
+    line-height: 49px;
+    display: flex;
+    align-items: center;
+}
+.header-top .right img{
+    width: 100%;
+    height: 100%;
+}
+.header-top .topbar-user {
+    display: inline-block;margin-right: 30px; 
+    line-height: 49px;height: 49px;
+    box-sizing: border-box;
+    color: #a5a5a5;
+}
+
+.header-top .topbar-user a {
+    color: #a5a5a5;
+    display: inline-block;
+}
+.header-top .topbar-cart{
+    display: inline-block;
+    margin-right: 30px;
+    width: 20px;
+    height: 20px;
+    background: url(../img/header-server.jpg.svg) no-repeat;
+}
+.topbar-service{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/header-cart.svg) no-repeat;
+}
+/* 导航------------------------------------------------------------------- */
+.header-nav {          
+    /* height: 100px; */
+    line-height: 100px;
+    box-sizing: border-box;
+}
+.header-nav .header-logo{
+    float: left;
+    padding-left: 50px;
+    margin-right: 70px;;
+}
+.header-nav .logo-inner a img {
+    width: 53px;
+    height: 29px;
+}
+
+.header-nav .nav-list{
+    float: right;
+    box-sizing: border-box;
+    margin-right: 70px;
+}
+.header-nav .nav-list .nav-item{
+    margin: 0 25px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.header-nav .nav-list .last{
+    text-align: center;
+}
+
+.header-nav .nav-list .nav-item a{
+    font-size: 17px;
+    display: inline-block;
+    color: #000;
+    font-family: "微软雅黑";
+    font-weight: bolder;
+}
+.header-nav .nav-list .nav-item:hover {
+    border-bottom: 4px solid#dd0000;
+}
+
+.header-nav .nav-list .nav-item.last:hover {
+    border:none;
+}
+.nav-search-box{
+    /* margin-top: 0; */
+    width: 212px;
+    height: 40px;
+    line-height: 26px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 6px 0;
+    box-sizing: border-box;
+}  
+.nav-search-box .nav-search-btn  {
+    width: 20px;
+    height: 20px;
+    padding-right: 13px;
+    display: inline-block;
+    background: url(..//img/header-search.svg) no-repeat;
+    vertical-align: middle;
+    border-right: 1px solid #ccc;
+}   
+.nav-search-box .nav-search-input{
+    width: 150px;
+    height: 26px;
+    border: none;
+    font-weight: normal;
+}
+
+
+
+
+
+/* 二级导航开始-------------------------------------- */
+/* .nav-list  .sub-nav-panel .sub-nav-inner{ */
+   /* display: flex; */
+   /* height: 310px; */
+
+
+/* 二级导航 panel */
+.sub-nav-panel{
+display: none;
+font: normal 12px "微软雅黑",Arial,sans-serif;
+font-weight: 400;
+list-style: none;
+box-sizing: border-box;
+position: absolute;
+background: #fff;
+z-index: 2;
+text-align: center;
+width: 100%;
+left: 0;
+top: 154px;
+overflow-x: hidden;
+border-top: 1px solid #cccccc;
+padding-top: 30px;
+}
+/* 男子二级导航 =======================================*/
+.two-man .outline{
+ width: 1295px;
+ height: 300px;
+padding-left: 50px;
+}
+.two-man .outline .first{
+    border-left: none;
+    width: 120px;
+    height: 310px;
+}
+
+.two-man .outline .sub-nav-item .cate-list{
+    width: 150px;
+    height: 310px;
+}
+.two-man .outline .sub-nav-item .cate-title a{
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+.two-man .outline .sub-nav-item .cate-list  li a{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.two-man .outline .sub-hot{
+    width: 240px;
+    height: 152px;
+    border-left: 1px solid #ccc;
+    
+}
+/* 女子二级导航 ==========================================*/
+.two-woman .outline{
+    width: 1114px;
+    height: 300px;
+padding-left: 100px;
+
+}
+
+.two-woman .outline .first{
+    border-left: none;
+    width: 120px;
+    height: 310px;
+}
+
+.two-woman .outline .sub-nav-item .cate-list{
+    width: 150px;
+    height: 310px;
+}
+.two-woman .outline .sub-nav-item .cate-title a{
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+.two-woman .outline .sub-nav-item .cate-list  li a{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.two-woman .outline .sub-hot{
+    width: 240px;
+    height: 152px;
+    border-left: 1px solid #ccc;
+    
+}
+
+/* 儿童二级导航 ==========================================*/
+.two-child .outline{
+    
+    height: 300px;
+padding-left: 100px;
+
+}
+.two-child .outline .first{
+    border-left: none;
+    width: 120px;
+    height: 310px;
+}
+
+.two-child .outline .sub-nav-item .cate-list{
+    width: 150px;
+    height: 310px;
+    
+}
+.two-child .outline .sub-nav-item .cate-title a{
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+.two-child .outline .sub-nav-item .cate-list  li a{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; */
+}
+.two-child .outline .sub-hot{
+    width: 271px;
+    height: 295px;
+    border-left: 1px solid #ccc;
+
+}
+.two-child .outline .sub-hot .bdtop{
+    width: 220px;
+    height: 123px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+
+}
+
+/* 共同=============================================================== */
+.sub-nav-panel .sub-nav-item{
+    padding-left: 30px;
+    border-left: 1px solid #ccc;
+    float: left;
+    text-align: left;
+}
+ /* 最后一列 */
+
+    
+     .sub-nav-panel .sub-nav-item .hot-title a{
+         font-size: 14px;
+         font-weight: 600;
+         color: #000;
+         line-height: 20px;
+         margin-bottom: 5px;
+         position: relative;
+         overflow: initial;
+      }
+      .sub-nav-panel .sub-nav-item .hot-list li{
+          padding-bottom: 10px;
+      }
+      .sub-nav-panel .sub-nav-item .hot-list li a span{
+        color: #999;
+        line-height: 40px;
+        height: 40px;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: normal;
+     } 
+.sub-nav-panel .sub-nav-item ul {
+     width: 100px;
+ }
+ .sub-nav-panel .newtag-list li{
+    height: 25px;
+    margin-bottom: 3px;
+    margin: 0;
+    padding-right: 30px;
+    
+}
+.sub-nav-panel .newtag-list li a{
+    font-size: 14px;
+    color: #000;
+    display: inline-block;
+    font-weight: normal;
+
+}
+.sub-nav-panel .sub-nav-item .cate-list li a{
+    font-weight: normal;
+    font-size: 13px;
+    height: 25px; 
+}
+.sub-nav-panel .sub-nav-item .cate-title{
+    padding-top: 0;
+   height: 30px;
+ 
+}.sub-nav-panel .sub-nav-item .cate-list{
+    float: left;
+    width: 130px;
+}
+/* =========================================================== */
+/* 二级导航结束--------------------------------------- */
+ /* 小圆点 */
+.swiper-pagination{
+    position: absolute;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+  }
+.swiper-pagination span{
+      width: 10px;
+      height: 10px;
+      margin: 18px 8px 0 8px;
+}
+.swiper-container{
+    /* height: 600px; */
+    /* width: 1920px; */
+    margin-top: 5px;
+    /* margin-left:-960px; */
+    left:50%;
+    position: relative;
+   
+    overflow:hidden;
+    z-index:1;
+    transform: translateX(-50%);
+}
+.swiper-container img{height: 100%; 
+    /* position: absolute;
+    left: 50%;
+    transform: translateX(-50%); */
+    width: 100%;
+    margin: 0 auto;
+}
+.swiper-slide{width: 100%;
+height: 100%;}
+
+/* 主体main区域  main-1 main-2=========================== */
+.main{
+    margin-top: 50px;
+    background-color: #0c1011;
+}
+.main .main1{
+    height: 300px;
+    width: 100%;
+    background: url(../img/t2.jpg) no-repeat;
+}
+.main .main2{
+    height: 670px;
+    
+    background: url(../img/t2-last.jpg) no-repeat;
+   
+}
+.main .main2 ul{
+    width: 1200px;
+    margin: 0 auto;
+}
+.main .main2 ul li {
+    float: left;
+    width: 300px;
+    height:578px;
+}
+.main .main2 ul li img{
+    width: 100%;
+    height: 100%;
+}
+.main .xinpin{
+    height: 940px;
+    background-color: #f0f;
+
+}
+.main .xinpin h3{
+    width: 1200px;
+    height: 55px;
+    margin: 0 auto;
+}
+.main .xinpin .textLogo {
+    display: inline-block;
+    width: 630px;
+    height: 55px;
+    background: url(https://anta-cn-web.obs.myhwclouds.com/theme/images/antacom/text-something.svg)
+     no-repeat;
+     background-size: 100% auto;
+     background-position: top center;
+    float: right;
+}
+.main .xinpin .bkLogo{
+    display: inline-block;
+    width: 271px;
+    height: 55px;
+    float: right;
+}
+.main .xinpin .bkLogo img{
+    height: 100%;
+}
+/*商品展示盒子   背景白色==================================================== */
+.main .xinpin .goodList{
+    background-color: #fff;
+    width: 1200px;
+    height:796px;
+    margin: 0px auto;
+    padding-top: 10px;
+}
+.main .xinpin .goodList ul{
+    width: 1170px;
+    height: 706px;
+    margin: 0 20px;
+}
+.main .xinpin .goodList ul li{
+    width: 285px;
+    height: 345px;
+    float: left;
+    margin-bottom: 8px;
+    margin-right: 5px;
+}
+.ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.main .xinpin .goodList ul li img{
+    width: 100%;
+}
+.main .xinpin .goodList ul li div a{
+    display: block;
+color: #000;
+}
+.main .xinpin .goodList ul li div .good-name{
+    width: 1000%;
+    height: 30px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+}
+/* .main .xinpin .goodList ul li div  .goodlist{
+    width: 25px;
+    height: 25px;
+} */
+.main .xinpin .goodList ul li:nth-of-type(1){
+    width: 290px;
+    height: 690px;
+}
+.main .xinpin .goodList .loadingLine{
+    text-align: right;
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    background: 
+    url(https://anta-cn-web.obs.myhwclouds.com/theme/images/icons/line-dashed.svg)
+    no-repeat;
+    background-size: 1000px auto;
+    background-position: 30px 8px;
+
+}
+.main .xinpin .goodList .loadingLine a{
+    font-family: MFMingHei;
+    font-style: italic;
+    transform: scaleY(1.5);
+    display: inline-block;
+    width: 120px;
+    height: 26px;
+    margin-right: 30px;
+    font-size: 25px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    color: #d00;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center right;
+    font-weight: 600;
+}
+/* 商品展示区域结束--------------------------------------------------------------- */
+
+
+.main .keji{
+    height: 875px;
+    background-color: #ff0;
+}
+.main .keji .keji-1{
+    /* width: 100%; */
+    height: 875px;
+    background: url(https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2019/1218/index-03.jpg) 
+    no-repeat;
+    
+}
+/* .custom-links{position:absolute;height:100%;width:100%;top:0;left:0} */
+.main .keji .keji-1 a
+{
+    position: absolute;
+    text-decoration: none;
+    color: #333;
+}
+/* 区域划分======================================================== */
+
+.main .jingpin {
+    height: 1214px;
+    padding: 50px 0;
+    background-color: #0c1011;
+}
+
+.main .jingpin h3{
+    width: 1200px;
+    height: 55px;
+    margin: 0 auto;
+}
+.main .jingpin .textLogo {
+    display: inline-block;
+    width: 630px;
+    height: 55px;
+    background: url(https://anta-cn-web.obs.myhwclouds.com/theme/images/antacom/text-something.svg)
+     no-repeat;
+     background-size: 100% auto;
+     background-position: top right;
+    float: right;
+}
+.main .jingpin .bkLogo{
+    display: inline-block;
+    width: 271px;
+    height: 55px;
+    float: right;
+}
+.main .jingpin .bkLogo img{
+    height: 100%;
+}
+.main .jingpin .goodList{
+    background-color: #fff;
+    width: 1200px;
+    height:1139px;
+    margin: 0 auto;
+}
+.main .jingpin .goodList ul{
+    width: 1170px;
+    height: 1049px;
+    margin: 0 20px;
+    padding-top: 10px;
+}
+.main .jingpin .goodList ul li{
+    width: 285px;
+    height: 345px;
+    float: left;
+    margin-bottom: 8px;
+    margin-right: 5px;
+}
+.main .jingpin .goodList ul li:nth-of-type(1){
+    width: 570px;
+    height: 336px;
+}
+.main .jingpin .goodList ul li img{
+    width: 100%;
+}
+.main .jingpin .goodList ul li div a{
+    display: block;
+color: #000;
+}
+.main .jingpin .goodList ul li div .good-name{
+    width: 1000%;
+    height: 30px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.main .jingpin .goodList .loadingLine{
+    text-align: right;
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    background: 
+    url(https://anta-cn-web.obs.myhwclouds.com/theme/images/icons/line-dashed.svg)
+    no-repeat;
+    background-size: 1000px auto;
+    background-position: 30px 8px;
+
+}
+.main .jingpin .goodList .loadingLine a{
+    font-family: MFMingHei;
+    font-style: italic;
+    transform: scaleY(1.5);
+    display: inline-block;
+    width: 120px;
+    height: 26px;
+    margin-right: 30px;
+    font-size: 25px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    color: #d00;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center right;
+    font-weight: 600;
+}
+
+
+/* 区域划分------------------------------------------------------------------------- */
+.main .customer-links{
+    height:561px;
+    background :url(https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2019/1014/index-05.jpg)
+    no-repeat;
+    background-position: -100px 0;
+    text-align: center;
+}
+
+
+
+
+/* .main-ft */
+.main .main-ft{
+    height: 180px;
+    background-color: #dd0000;
+    padding: 50px 0;
+}
+.main .main-ft .weixin{
+    text-align: center;
+    margin: 0 auto;
+}
+.main .main-ft .weixin h3{
+    margin: 0 auto;
+    background: url(https://anta-cn-web.obs.myhwclouds.com/theme/images/antacom/text-followus-w.svg) no-repeat;
+    background-position: 50% 50%;
+    width: 432px;
+    height: 34px;
+}
+.main .main-ft .weixin p{
+    width: 432px;
+    height: 40px;
+   margin :5px auto;
+    color:#fff ;
+    font-size: 18px;
+    font-style: italic;
+}
+.main .main-ft .weixin .erweima{
+    width: 432px;
+    height: 91px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.main .main-ft .weixin ul li:nth-of-type(1) a{
+  display:inline-block;
+  width: 85px;
+  height: 85px;
+  background: url(https://anta-cn-web.obs.myhwclouds.com/theme/images/icons/wechat-w.svg) no-repeat;
+
+}
+.main .main-ft .weixin ul li:nth-of-type(2) a{
+  display:inline-block;
+  width: 85px;
+  height: 85px;
+  background: url(https://anta-cn-web.obs.myhwclouds.com/theme/images/icons/weibo-w.svg) no-repeat;
+  /* https://anta-cn-web.obs.myhwclouds.com/theme/images/icons/weibo-w.svg */
+}
+
+/* 区域划分 ===============================================================*/
+
+
+/* footer------------------------------------------- */
+footer{
+    height: 242px;
+    background-color: #000;
+}
+footer .footer{
+    width: 1280px;
+   margin: 0 auto;
+   padding: 50px 0;
+
+}
+footer .footer .ft-logo{
+    width: 250px;
+    height: 118px;
+    float: left;
+    
+}
+footer .footer .ft-list{
+    width: 900px;
+    height: 110px;
+    float: right;
+    display: flex;
+   flex-direction: column;
+}
+.footer .links-line li{
+    float: left;
+    border-right: 1px solid #fff;
+    margin: 0 15px 0 0 ;
+    padding-right: 15px;
+ }
+ .footer .links-line .last-one{
+    border: none}
+
+
+.footer .links-line li a{
+    color: #fff;
+    cursor: pointer;
+
+}
+.footer .ft-company span {
+    color: #fff;
+}
+.footer .ft-company{
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.footer .ft-company a{
+    color: #fff;
+    cursor: pointer;
+
+}
+.footer .links-line li a:hover{
+    text-decoration: none;
+
+}
+.footer .ft-company a:hover{
+    text-decoration: none;
+}
+
+
+
+/* 回到顶部========================================== */
+#getTop{
+    background: url(https://anta-cn-web.obs.myhwclouds.com/theme/images/icons/web-cover.svg) no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    z-index: 999;
+    position: fixed;
+    right: 50px;
+    bottom: 60px;
+    width: 60px;
+    height: 275px;
+}
+
+#getTop a {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 33.33%;
+    right: initial;
+    bottom: initial;
+    left: 0;
+    cursor: pointer;}
+#getTop .goto-top{
+        cursor: pointer;
+        height: 91px;
+    }
+#getTop .cover-top {top: 0;}
+#getTop .cover-cart {top: 33.33%;
+height: 91px;}
+#getTop .cover-kefu {top: 66.66%;
+height: 91px;}
+

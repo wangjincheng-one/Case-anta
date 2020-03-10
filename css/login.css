@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    height: 601px;
+    background: url(https://anta-cn-web.obs.myhwclouds.com/theme/images/antacn/login/login-01.jpg)
+     no-repeat;
+}
+.main .main1{
+    width: 460px;
+    height: 470px;
+    padding: 0 20px 30px 20px;
+    position :absolute;
+    top: 50px;
+    right: 100px;
+    background-color: #fff;
+    z-index: 1;
+    
+}
+.lgnheader{
+    width: 460px;
+    height: 70px;
+}
+
+
+
+.c_b{
+    width: 100%;
+    height: 100%;
+}
+.c_b div{
+font: normal 12px "微软雅黑",Arial,sans-serif;
+font-weight: 400;
+color: #666;
+font-size: 14px;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+position: relative;
+}
+
+form .labelbox {
+    font: normal 12px "微软雅黑",Arial,sans-serif;
+    font-weight: 400;
+    color: #666;
+    font-size: 14px;
+    box-sizing: border-box;
+    
+    margin-bottom: 14px;
+    padding: 0;
+    border: 1px solid #e0e0e0;
+
+}
+form .labelbox input{
+    box-sizing: border-box;
+margin: 0;
+float: none;
+font-size: 100%;
+font-family: Arial;
+background: none;
+border: 0 none;
+width: 100%;
+height: 42px;
+line-height: 22px;
+padding: 13px 16px 13px 14px;
+display: block;
+}
+
