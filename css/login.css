@@ -12,58 +12,83 @@
     height: 470px;
     padding: 0 20px 30px 20px;
     position :absolute;
-    top: 50px;
+    top: 200px;
     right: 100px;
     background-color: #fff;
     z-index: 1;
     
 }
-.lgnheader{
+.mainbox{
     width: 460px;
-    height: 70px;
+    height: 427px;
+    padding-bottom: 30px;
 }
-
-
-
-.c_b{
-    width: 100%;
-    height: 100%;
+.login-box{
+    margin-top: 70px;
+    width: 460px;
+    height:235px ;
 }
-.c_b div{
-font: normal 12px "微软雅黑",Arial,sans-serif;
-font-weight: 400;
-color: #666;
-font-size: 14px;
+.other-method{
+width: 358px;
+height: 73px;
+margin: 0 auto;
+}
+.forget{
+    width: 450px;
+    height: 19px;
+  padding-top: 30px;
+}
+form input{
+    display: block;
+    width: 358px;
+    height: 50px;
+    margin: 10px auto;
+}
+form input:nth-of-type(1)
+{
+padding-left: 10px;
 box-sizing: border-box;
-margin: 0;
-padding: 0;
-position: relative;
 }
-
-form .labelbox {
-    font: normal 12px "微软雅黑",Arial,sans-serif;
-    font-weight: 400;
-    color: #666;
-    font-size: 14px;
-    box-sizing: border-box;
-    
-    margin-bottom: 14px;
+form input:nth-of-type(2){
+padding-left: 10px;
+box-sizing: border-box;
+}
+form input:nth-of-type(3){
+    color: #fff;;
+    background-color: #000;
+    outline: none;
     padding: 0;
-    border: 1px solid #e0e0e0;
+    width:358px;
+    border: none;
+}
+.other-method p{
+    text-align: center;
+}
+.other-method a{
+    width: 30px;
+    height: 30px;
+    margin: 0 12px;
+    display: inline-block;
+    background-image: url(https://anta-cn-web.obs.myhwclouds.com/theme/images/icons/wechat-cr-g.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.sm-logo {
+    text-align: center;
+    width: 358px;
+    height: 34px;
+    padding-top: 10px;
+}
+.forget{
+    text-align: center;
+}
+.forget a{
+    padding: 0 9px;
+    font-size: 14px;
+    color: #333;
+}
 
-}
-form .labelbox input{
-    box-sizing: border-box;
-margin: 0;
-float: none;
-font-size: 100%;
-font-family: Arial;
-background: none;
-border: 0 none;
-width: 100%;
-height: 42px;
-line-height: 22px;
-padding: 13px 16px 13px 14px;
-display: block;
-}
 
