@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/prodList.css">
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/prodList.js"></script>
+    <script src="js/nav.js"></script>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
         <div class="header-top">
             <div class="right">
                 <div class="topbar-user">
-                    <a href="login.html" title="登入">登入</a>&nbsp;或&nbsp;
+                    <a href="login.html" title="登入" id="dengru">登入</a>&nbsp;或&nbsp;
                     <a href="register.html" title="注册">注册</a>&nbsp;ANTA会员
                 </div>
                 <div class="topbar-cart"><a href="prodCar.html" class="topbar-icon" title="购物车">
@@ -469,34 +470,18 @@
                         <a href="" class="nav-b-after">&gt;</a>
                     </div>
                 </div>
-                <ul class="good-main">
-                    <li class="good-item">
+                <ul class="good-main" id="prodList">
+                    <!-- <li class="good-item">
                         <div class="good-body">
-                            <a href="" class="pimg"><img
-                                    src="https://anta-cn-web.obs.myhwclouds.com/goods/32938003/zt-32938003.jpg?x-image-process=image/resize,w_300,h_300"
-                                    alt=""></a>
-                            <a href="" class="pdesc">女鞋女中大童鞋板鞋运动鞋2019秋冬款</a>
-                            <a href="" class="pprice"><span>￥209.00</span></a>
+                            <a href="#" class="pimg">
+                                <img  src="https://anta-cn-web.obs.myhwclouds.com/goods/32938003/zt-32938003.jpg?x-image-process=image/resize,w_300,h_300"
+                                    alt="">
+                            </a>
+                            <a href="#" class="pdesc">女鞋女中大童鞋板鞋运动鞋2019秋冬款</a>
+                            <a href="#" class="pprice"><span>￥209.00</span></a>
                         </div>
-                    </li>
-                    <li class="good-item">
-                        <div class="good-body">
-                            <a href="" class="pimg"><img
-                                    src="https://anta-cn-web.obs.myhwclouds.com/goods/32938003/zt-32938003.jpg?x-image-process=image/resize,w_300,h_300"
-                                    alt=""></a>
-                            <a href="" class="pdesc">女鞋女中大童鞋板鞋运动鞋2019秋冬款</a>
-                            <a href="" class="pprice"><span>￥209.00</span></a>
-                        </div>
-                    </li>
-                    <li class="good-item">
-                        <div class="good-body">
-                            <a href="" class="pimg"><img
-                                    src="https://anta-cn-web.obs.myhwclouds.com/goods/32938003/zt-32938003.jpg?x-image-process=image/resize,w_300,h_300"
-                                    alt=""></a>
-                            <a href="" class="pdesc">女鞋女中大童鞋板鞋运动鞋2019秋冬款</a>
-                            <a href="" class="pprice"><span>￥209.00</span></a>
-                        </div>
-                    </li>
+                    </li> -->
+                   
                 </ul>
                 <div class="good-footer">
                     <div class="nav-bottom">
@@ -537,25 +522,6 @@
                 </div>
 
 
-                <!-- <ul class="links-line">
-                    <li><a href="" target="_blank">安踏海外</a></li>
-                    <li class="last-one"><a href="" target="_blank">安踏投资者关系</a></li>
-                </ul>
-                <div class="ft-company">
-                    <span>Copyright(C) 2020 by www.ANTA.com</span>
-                    <span>闽ICP备11020421号</span>
-                    <span>©安踏体育用品有限公司版权所有</span>
-                    <a target="_blank" href="">营业执照</a>
-                    <a target="_blank" href="">开户许可证</a>
-                </div>
-                <ul class="links-line">
-                    <li><a href="" target="_blank">安踏儿童</a></li>
-                    <li><a href="" target="_blank">Fila</a></li>
-                    <li><a href="">Kolon Sport</a></li>
-                    <li><a href="">Descente</a></li>
-                    <li><a href="">Sprandi</a></li>
-                    <li class="last-one"><a href="">Kingkow</a></li>
-                </ul> -->
 
             </div>
         </div>
@@ -571,50 +537,7 @@
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-        $(function () {
-            $.get("http://jx.xuzhixiang.top/ap/api/productlist.php").then(data => {
-                console.log(data)
-                var str = "";
-                str += ``
-            })
-            // 商品列表接口  需要传用户id
-            //      $.get("http://jx.xuzhixiang.top/ap/api/productlist.php",{})  
-            //      .then(data=>{
-            //          console.log(data)
-            //      }) 
-            // //如何使用自己的数据1.通过接口添加数据
-            // $.post("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php"
-            //     ,{
-            //     pname:"",
-            //     pprice:"",
-            //     pimg:"",
-            //     pdesc:"",//商品描述
-            //     uid:"",
-            // })
-
-
-
-
-
-        })
-
-
-    </script>
+   
 </body>
 
 </html>

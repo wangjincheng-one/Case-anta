@@ -41,7 +41,8 @@ $(function () {
                   password : $("#password").val()
               } ,data=>{
                  if(data.code ==1){
-                     location.href ="../res/login.html";
+                     location.href ="login.html";//注册成功跳转到登录页面
+                    // console.log(1)
                  }
               })
             }else{

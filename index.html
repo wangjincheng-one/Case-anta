@@ -7,11 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>【安踏官方商城】-永不止步Keep Moving</title>
     <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="../swiper.min.css">
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/index.js"></script>
     <!-- <script src="../js/bootstrap.min.js"></script> -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/commom-head.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <!-- <link rel="stylesheet" href="css/index.css"> -->
     <style>
 
@@ -24,14 +25,13 @@
         <div class="header-top">
             <div class="right">
                 <div class="topbar-user">
-                    <a href="login.html" title="登入">登入</a>&nbsp;或&nbsp;
+                    <a href="login.html" title="登入" id="dengru">登入</a>&nbsp;或&nbsp;
                     <a href="register.html"  title="注册">注册</a>&nbsp;ANTA会员
                 </div>
                 <div class="topbar-cart"><a href="prodCar.html" class="topbar-icon" title="购物车">
                     </a></div>
                 <div class="topbar-service">
-                    <a herf="" class="topbar-icon" title="在线客服">
-
+                    <a href="" class="topbar-icon" title="在线客服">
                     </a>
                 </div>
             </div>
@@ -371,8 +371,8 @@
     <!--banner图部分  -->
     <div class=" model-box swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img
-                    src="https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2020/0113/3-xiuxian.jpg" alt=""></div>
+            <div class="swiper-slide">
+                <img src="https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2020/0113/3-xiuxian.jpg" alt=""></div>
             <div class="swiper-slide"><img
                     src="https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2020/0113/1-KT5.jpg" alt=""></div>
             <div class="swiper-slide"><img
@@ -389,31 +389,31 @@
         </div>
         <div class="main2">
             <!-- <img src="../res/img/t2-last.jpg" alt=""> -->
-            <ul class="stars">
+            <ul class="stars" id="stars">
                 <li>
                     <a href="">
-                        <img src="../res/img/t3.jpg">
+                        <img src="img/t3.jpg">
                         <img src="https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2019/1226/index-0201-gxt-02.png"
                             alt="" style="display: none;">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="../res/img/t4.jpg">
+                        <img src="img/t4.jpg">
                         <img src="https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2019/1226/index-0202-cfy-02.png"
                             alt="" style="display: none;">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="../res/img/t5.jpg">
+                        <img src="img/t5.jpg">
                         <img src="https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2019/1226/index-0203-zjk-02.png"
-                            alt="" style="display: none;">
+                            alt="" style="display: none; ">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="../res/img/t6.jpg">
+                        <img src="img/t6.jpg">
                         <img src="https://anta-cn-web.obs.myhwclouds.com/theme/images/area/2019/1226/index-0204-kt-02.png"
                             alt="" style="display: none;">
                     </a>
@@ -431,7 +431,7 @@
 
                 </span>
             </h3>
-            <div class="goodList">
+            <div class="goodList" id="xin-List">
                 <ul>
                     <li> <a href=""><img src="../res/img/t7.jpg" alt=""></a></li>
                     <li>
@@ -525,7 +525,7 @@
                 </span>
 
             </h3>
-            <div class="goodList">
+            <div class="goodList" id="jing-List">
                 <ul>
                     <li>
                         <a href=""><img
@@ -802,7 +802,7 @@
 
 
 <!-- Swiper JS -->
-<script src="../swiper.min.js"></script>
+<script src="js/swiper.min.js"></script>
 
 <!-- Initialize Swiper -->
 <script>

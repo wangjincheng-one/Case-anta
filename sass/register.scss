@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.main{
+    height: 697px;
+    background: url(https://anta-cn-web.obs.myhwclouds.com/theme/images/antacn/login/login-01.jpg)
+     no-repeat;
+     position: relative;
+}
+.main .main1{
+    width: 500px;
+    height: 500px;
+    position :absolute;
+    top: 50px;
+    right: 100px;
+    background-color: #fff;
+    z-index: 1;
+    
+}
+.main .main1 .top{
+    width: 400px;
+    height: 395px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    padding-top: 40px;
+    font-size: 14px;
+}
+.regType{
+    width: 380px;
+    height: 35px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0 10px 20px;
+}
+.regType a{
+    
+    width: 190px;
+    height: 35px;
+    background: #fbfbfb;
+    color: #999;
+    line-height: 35px;
+    float: left;
+}
+.regType a:hover{
+    background: #000;
+    color: #fff;
+}
+
+#reg_form{
+    width: 400px;
+    height: 283px;
+}
+#reg_form .regbox{
+    width: 100%;
+    font-size: 14px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+#reg_form .regbox h5{
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+}
+.inputbg{
+    padding-bottom: 15px;
+}
+.inputbg .labelbox{
+    background: #fff;
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.inputbg .labelbox input{
+   
+    padding: 5px 10px;
+    line-height: 30px;
+    display: block;
+    box-sizing: border-box;
+    border: none;
+}
+#reg_form .regbox .inputcode .labelbox-captcha{
+    width: 231px;
+    height: 42px ;
+    
+}
+#captcha{
+    display:flex;
+    align-items: center;
+}
+
+#captcha-code{
+    border: none;
+    padding: 5px 10px;
+    line-height: 30px;
+    display: block;
+    box-sizing: border-box;
+
+}
+.chkcode_img{
+    
+    width: 120px;
+    height:36px;
+    margin-left: 7px;
+    background-color: #0f0;
+}
+.labeelbox-agree
+ {
+ border: none;
+font-size: 13px;
+color: #000;
+width: 360px;
+height: 17px;
+    }
+
+    /* 勾选协议 */
+    .labelbox-agree{
+        height: 17px;
+        /* width: 360px; */
+        margin-bottom: 60px;
+        
+    }
+    .labelbox-agree a{
+        color: #999;
+    }
+ #agree .labelbox{
+border: none;
+display: flex;
+align-items: center;
+    }
+  .regbox #agree #agree-check{
+       /* float: left; */
+        width: 13px;
+        height: 13px;
+    }
+.fixed_box{
+    
+    width: 360px;
+    height: 98px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}    
+.fixed_box input
+{
+    background-color: #000;
+    /* margin-top: 60px; */
+    border: 1px solid rgba(186, 186, 186, 0.3);
+    color: #fff;
+box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    line-height: normal;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+    border: 1px solid #e8e8e8;
+    
+}

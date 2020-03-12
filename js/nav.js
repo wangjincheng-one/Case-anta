@@ -1,4 +1,9 @@
 $(function(){
+  /* 从localstorage 里获取数据 */
+  var uData  = JSON.parse(localStorage.getItem("uData"));
+  // console.log(uData)
+  // console.log(uData.uusername)
+  $("#dengru").html("热烈欢迎" + uData.uusername)
      //  二级导航
 //  console.log( $(".header-nav .nav-list .nav-item"))
  $(".header-nav .nav-list .nav-item").mouseenter(function() {

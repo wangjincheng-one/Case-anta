@@ -1,0 +1,455 @@
+.container{
+    width: 100%;
+    overflow: hidden;
+}
+.container .p-main{
+    margin: 20px auto;
+    width: 1280px;
+    height: 645px;
+}
+/* 左侧放大镜区域 */
+.container .p-main .main-left{
+    width: 710px;
+    height: 645px;
+    padding-left: 30px;
+    float: left;
+    
+}
+.container .p-main .main-left .main-left-list{
+    width: 50px;
+    height: 645px;
+    float: left;
+    position: relative;
+}
+
+
+.list-con{
+    width: 50px;
+    height: 120px;
+    position: absolute;
+    width: 50px;
+    height: auto;
+    bottom: 0;
+    left: 0;
+}
+.list-con a{
+    display: block;
+    padding-top: 30px;
+    text-align: center;
+    color: #999;
+    height: 50px;
+    overflow: hidden;
+    line-height: 20px;
+    font-size: 13px;
+    background-size: 30px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    margin-top: 9px;
+    margin-top: 9px;
+}
+.list-con .con-share{
+background: url(https://anta-cn-web.obs.myhwclouds.com/theme/images/antacn/icons/share-cr-bw.svg) no-repeat;
+background-position: center -10px;
+background-size: contain;
+}
+
+.list-con .con-collect{
+    background-image: url(https://anta-cn-web.obs.myhwclouds.com/theme/images/antacn/icons/heart-cr-g.svg);
+    background-size: 22px auto;
+    background-position: center 5px;
+}
+
+/* ============================================================== */
+/* 放大镜 */
+/* .container .p-main .main-left .main-left-con{
+    width: 643px;
+    height: 643px;
+    margin-left: 15px;
+    position: relative;
+    border: 1px solid #eee;
+    overflow: hidden;
+    float: left;
+
+} */
+/* ==================放大镜里样式======================================== */
+.container img {
+    display: block;
+}
+#zooBox {
+    position: relative;
+    width: 710px;
+    height: 645px;
+    padding-left: 30px;
+    float: left;
+    /* border: 1px solid #ccc; */
+}
+
+#midBox {
+    width: 642px;
+    height: 642px;
+    margin-left: 15px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eee;
+    float: right;
+}
+
+#midBox img {
+    width: 100%;
+    height: 100%;
+}
+
+#glass {
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: .3;
+    filter: alpha(opacity=30);
+}
+
+
+#bigBox {
+    display: none;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 710px;
+    top: -1px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+#bigBox img{
+    width: 800px;
+    height:
+    800px;
+}
+#bigBox img {
+    position: absolute;
+    width: 1600px;
+    height: 1600px;
+    top: 0;
+    left: 0;
+}
+#smallBox {
+display: flex;
+flex-direction: column;
+ width: 50px;
+ height: 645px;
+position: relative;
+}
+#smallBox img {
+display: block;
+width: 48px;
+height: 48px;
+margin: 10px 0;
+box-sizing: border-box;
+border: 1px solid #eee;
+}
+/* #smallBox img:nth-of-type(1){
+    top: 0;
+}
+#smallBox img:nth-of-type(2){
+    top: 50px;
+}
+#smallBox img:nth-of-type(3){
+    top: 100px;
+} */
+/* =============================区域划分========================== */
+.container .p-main .main-right{
+    width: 495px;
+    height: 645px;
+    padding-left: 45px;
+    background-color: #fff;
+    float: left;
+}
+.container .p-main .main-right .r-title{
+width: 495px;
+height: 218px;
+}
+.r-title p{
+    font-size: 14px;
+    color: #999;
+    line-height: 25px;
+}
+.r-title h3{
+    font-size: 25px;
+    line-height: 40px;
+    height: 40px;
+    font-weight: normal;
+}
+.r-title p:nth-of-type(2){
+font-size: 15px;}
+.r-title p:nth-of-type(3){
+    font-size: 22px;
+    color: #000;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 15px 0;
+}
+.r-title p:nth-of-type(3) span{
+    color: #999;
+    text-decoration: line-through;
+    font-weight: normal;
+    margin-left: 10px;
+    font-size: 15px;
+}
+.r-title .cuxiao{
+    background: #f7f7f7;
+    padding: 20px;
+height: 26px;
+}
+.cuxiao-title{
+width: 44px;
+height: 22px;
+line-height: 20px;
+background: #000;
+color: #fff;
+text-align: center;
+font-size: 13px;
+border-radius: 2px;
+margin-top: 2px;
+float: left;
+}
+.cuxiao-con{
+width: 395px;
+height: 26px;
+margin-left: -10px;
+/* padding-left: 80px; */
+float: right;
+}
+.cuxiao-con a{
+    display: block;
+    width: 395px;
+    height: 20px;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 3px 0;
+    color: #000;
+}
+
+
+/* ================================================================ */
+.container .p-main .main-right .r-con{
+    width: 495px;
+ /* background-color: #f00; */
+    height: 378px;
+}
+.r-con ul{
+    width: 495px;
+    height: 120px;
+    
+    margin-bottom: 15px;
+    width: 100%;
+    min-height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    padding-top: 25px;
+}
+.r-con ul li{
+       min-height: 80px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 80px;
+    width: 80px;
+    border: 1px solid #eee;
+    cursor: pointer;
+    position: relative;
+}
+.r-con .show-sizeTable{
+    width: 114px;
+    height: 25px;
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 14px;
+    color: #999;
+    line-height: 25px;
+}
+
+.select-size{
+    width:495px;
+height: 102px;
+    margin: 10px 0;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+.sel-top{
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    width: 495px;
+    height: 30px;
+}
+.half-cell{
+    width:215px ;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    color: #999;
+    font-size: 13px;
+    padding-right: 30px;
+    position:relative;
+    cursor: default;
+}
+.sel-top .line{
+    float: left;width: 5px;
+}
+.sel-top .half-cell span{
+    width: 50px;
+    height: 30px;
+    text-align: left;
+}
+.half-cell input{
+    border: 0;
+    height: 30px;
+    width: 100px;
+    padding: 0 10px;
+    line-height: 30px;
+    outline: 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}
+.half-cell i{
+    border-left: 7px solid #666;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    top: 9px;
+    right: 7px;
+    position: absolute;
+    content: '';
+
+}
+
+.sel-bottom{
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    width: 495px;
+    height: 30px;
+}
+.sel-bottom div{
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    overflow: hidden;
+    color: #999;
+    font-size: 13px;
+    padding-right: 30px;
+    position: relative;
+    cursor: default;
+}
+.sel-bottom  span{
+    width: 90px;
+    height: 30px;
+}
+.sel-bottom i{
+    border-left: 7px solid #666;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    top: 9px;
+    right: 37px;
+    position: absolute;
+    content: '';
+
+}
+
+.r-btn{
+    width: 495px;
+    height: 70px;
+}
+.r-btn .btn-addCart{
+float: left;
+height: 60px;
+line-height: 58px;
+display: block;
+width: 45%;
+text-align: center;
+border: 1px solid #666;
+color: #000;
+font-size: 17px;
+margin-top: 10px;
+background: #fff;
+}
+.r-btn .btn-toBuy{
+    float: right;
+    height: 60px;
+    line-height: 58px;
+    display: block;
+    width: 45%;
+    text-align: center;
+    border: 1px solid #666;
+    color: #000;
+    font-size: 17px;
+    margin-top: 10px;
+    background: #fff;
+}
+
+.r-btn .btn-toBuy:hover{
+    background-color: #000;
+    color: #fff;
+}
+.r-btn .btn-addCart:hover{
+    background-color: #000;
+    color: #fff;
+
+}
+/* =====================区域划分========================== */
+.p-tab div{
+    width: 50%;
+    height: 39px;
+    padding: 80px 0 ;
+    float: left;
+    font-size: 30px;
+    display: block;
+    padding: 80px 0;
+    letter-spacing: 1px;
+    position: relative;
+    border-bottom: 1px solid #999;
+    text-align: right;
+}
+
+.p-tab div:nth-of-type(1) p{
+    width: 550px;
+    text-align: center;
+}
+.p-tab span{
+    position: relative;
+    display: inline-block;
+    cursor: default;
+}
+.p-tab span::before{
+    content: '';
+    height: 3px;
+    width: 50px;
+    background: #000;
+    position: absolute;
+    top: -5px;
+    left: 0;
+
+}
+.p-tab div:nth-of-type(1) i{
+    display: block;
+    position: absolute;
+    top: 179px;
+    right: 260px;
+    height: 40px;
+    width: 40px;
+    border-left: 1px solid #999;
+    border-top: 1px solid #999;
+    transform: rotate(45deg);
+    background: #fff;
+}
+
+/* ==================区域划分===================== */
+.p-detail{
+    padding-top: 50px;clear: both;
+}
+.p-detail img{
+    display: inline;
+    border: 0;
+    display: block !important;
+    margin: 0 auto;
+}

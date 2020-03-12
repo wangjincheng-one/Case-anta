@@ -21,7 +21,7 @@
         <div class="header-top">
             <div class="right">
                 <div class="topbar-user">
-                    <a href="login.html" title="登入">登入</a>&nbsp;或&nbsp;
+                    <a href="login.html" title="登入" id="dengru">登入</a>&nbsp;或&nbsp;
                     <a href="register.html" title="注册">注册</a>&nbsp;ANTA会员
                 </div>
                 <div class="topbar-cart"><a href="prodCar.html" class="topbar-icon" title="购物车">
@@ -449,13 +449,13 @@
         <div class="sel-top">
                 <div class="half-cell goods-size-cell">
                     <span>尺码:</span>
-                    <input id="selectSize" type="text" placeholder="请选择尺码" readonly="readonly">
+                    <input id="selectSize" type="text" placeholder="请选择尺码" value="42" readonly="readonly">
                     <i class="iconfont"></i>
                 </div>
                  <i class="line">|</i>
                 <div class="half-cell goods-num-cell">
                     <span>数量:</span>
-                    <input id="selectNum" type="text"   placeholder="购买数量" readonly="readonly">
+                    <input id="selectNum" type="text"  value="1" placeholder="购买数量" >
                     <i class="iconfont"></i>
                 </div>
                             
@@ -466,9 +466,9 @@
             <i></i>
         </div>
     </div>
-    <div class="r-btn">
-            <a href="" class="btn-addCart ">加入购物车</a>
-            <a href="" class="btn-toBuy ">立即购买</a>
+    <div class="r-btn " id="addBtn">
+            <a href="#" class="btn-addCart ">加入购物车</a>
+            <a href="#" class="btn-toBuy ">立即购买</a>
     </div>
 </div>
 

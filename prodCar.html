@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/prodCar.css">
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/prodCar.js"></script>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
         <div class="header-top">
             <div class="right">
                 <div class="topbar-user">
-                    <a href="login.html" title="登入">登入</a>&nbsp;或&nbsp;
+                    <a href="login.html" title="登入" id="dengru">登入</a>&nbsp;或&nbsp;
                     <a href="register.html" title="注册">注册</a>&nbsp;ANTA会员
                 </div>
                 <div class="topbar-cart"><a href="prodCar.html" class="topbar-icon" title="购物车">
@@ -377,19 +378,21 @@
                 </h3>
                 <div class="cart-allSelect">
                     <label class="checkbox-label checkbox-all">
-                        <input type="checkbox" class="checkbox-input"><i></i><span>全选</span>
+                        <input type="checkbox" id="checkAll" class="checkbox-input">
+                        <span>全选</span>
                     </label>
                 </div>
 
-                <table class="cart-table">
-                    <tr>
+                <table class="cart-table" id="cartList">
+                    <!-- 标准字符串 -->
+                    <!-- <tr>
                         <td class="td-check">
                             <label class="checkbox-label checkbox-one">
                                 <input type="checkbox" class="checkbox-input"><i></i>
                             </label>
                         </td>
                         <td class="td-img">
-                            <a href="" title="跑鞋">
+                            <a href="" title="">
                                 <img src="" alt="">
                             </a>
                         </td>
@@ -399,9 +402,10 @@
                                     <h5>跑鞋</h5>
                                     <p><span>颜色:象牙白/超氢蓝;尺码:40</span></p>
                                 </div>
-                                <div class="fr"></div>
+                                <div class="fr">
                                 <span class="nowprice">￥259.00</span>
-                                <span class="pprice">￥399.00</span>
+                                <span class="pprice" style="">￥399.00</span>
+                            </div>
                             </div>
             </div>
             <div class="td-cont-bottom">
@@ -418,7 +422,7 @@
             </div>
 
             </td>
-            </tr>
+            </tr> -->
             </table>
         </div>
 
@@ -428,17 +432,17 @@
                     <div class="p-option">
                         <label class="checkbox-label checkbox-all">
                             <input type="checkbox"
-                                class="checkbox-input"><i></i><span>全选商品</span>
+                                class="checkbox-input"><span>全选商品</span>
                             </label>
-                                <a href="" class="delete-multi">删除商品</a>
+                                <a href="#" class="delete-multi">删除商品</a>
                     </div>
                     <div class="sum-price">
                             <span>总价</span>
-                            <span class="price">￥0.00<span>总价</span></span>
+                            <span class="price" id="totalPrice">￥0.00<span>总价</span></span>
                     </div>
                 </div>
                 <div class="fl jiesuan">
-                    <a href="javascript:;" class="btn-to-settle">结算</a>
+                    <a href="#" class="btn-to-settle">结算</a>
                 </div>
             </div>
         </div>
