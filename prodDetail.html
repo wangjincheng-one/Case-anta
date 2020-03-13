@@ -13,6 +13,78 @@
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/prodDetail.js"></script>
     <script src="js/nav.js"></script>
+    <style>
+    #zooBox {
+        position: relative;
+        width: 710px;
+        height: 645px;
+        padding-left: 30px;
+        float: left;
+        border: 1px solid #ccc;
+    }
+
+    #midBox {
+        width: 643px;
+        height: 643px;
+        margin-left: 15px;
+        position: relative;
+        border: 1px solid #eee;
+        overflow: hidden;
+        float: left;
+    }
+
+    #midBox img {
+        width: 644px;
+        height: 644px;
+    }
+
+    #glass {
+        display: none;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        opacity: .3;
+        filter: alpha(opacity=30);
+    }
+
+
+    #bigBox {
+        /* display: none; */
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        left: 730px;
+        top: 170px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+    }
+    
+    #bigBox img{
+        width: 800px;
+        height:800px;
+        position: absolute;
+        width: 1600px;
+        height: 1600px;
+        z-index: 11;
+       
+    }
+    #smallBox {
+     width: 50px;
+     height: 290px;
+     position: absolute;
+     left: 10px;
+     top: 170px;
+   
+    }
+    #smallBox img {
+    width: 48px;
+    height: 48px;
+    margin: 10px 0;
+    border: 1px solid #eee;
+    position: relative;
+    }
+    </style>
 </head>
 
 <body>
@@ -369,7 +441,24 @@
         <div class="p-main">
             <!-- 放大镜 -->
             <div class="main-left">
-                <div id="zoomBox">
+                    <div id="zoomBox">
+                            <div id="midBox">
+                                <img src="https://anta-cn-web.obs.myhwclouds.com/shopgoods/1/11941607/zt-11941607.jpg?x-image-process=image/resize,w_800,h_800">
+                                <div id="glass"></div>
+                            </div>
+                            <div id="bigBox">
+                                <img src="https://anta-cn-web.obs.myhwclouds.com/shopgoods/1/11941607/zt-11941607.jpg?x-image-process=image/resize,w_800,h_800" alt="">
+                            </div>
+                    
+                            <div id="smallBox">
+                                <img src="https://anta-cn-web.obs.myhwclouds.com/goods/11941607/11941607-1-1.jpg?x-image-process=image/resize,w_220,h_220" alt="">
+                                <img src="https://anta-cn-web.obs.myhwclouds.com/goods/11941607/11941607-1-2.jpg?x-image-process=image/resize,w_220,h_220" alt="">
+                                <img src="https://anta-cn-web.obs.myhwclouds.com/goods/11941607/11941607-1-3.jpg?x-image-process=image/resize,w_220,h_220" alt="">
+                                
+                    
+                            </div>
+                        </div>
+                <!-- <div id="zoomBox">
                     <div id="midBox">
                         <img
                             src="https://anta-cn-web.obs.myhwclouds.com/shopgoods/1/11941607/zt-11941607.jpg?x-image-process=image/resize,w_800,h_800">
@@ -395,17 +484,17 @@
                             <a href="" class="con-collect">收藏</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
                 <!-- ============================================================== -->
 
 
-                <div id="bigBox">
+                <!-- <div id="bigBox">
                     <img
                         src="https://anta-cn-web.obs.myhwclouds.com/shopgoods/1/122015558/122015558-6-1.jpg?x-image-process=image/resize,w_220,h_220">
 
-                </div>
+                </div> -->
             </div>
 
 
@@ -497,27 +586,8 @@
         <div class="p-detail">
             <img src="https://anta-cn-web.obs.myhwclouds.com/goods/11941607/wp-11941607-7_01.jpg" alt="">
             <img src="https://anta-cn-web.obs.myhwclouds.com/goods/11941607/wp-11941607-7_01.jpg" alt="">
-
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- 底部部分 -->
     <footer>
         <div class="footer">
@@ -575,6 +645,79 @@
         <a class="cover-cart" href="prodCar.html" title="购物车"></a>
         <a class="cover-kefu" href="https://qiyukf.com" target="_blank" title="在线客服"></a>
     </div>
+
+    <script>
+            //获取元素  根据ID获取元素，返回该元素
+        function iD(id) {
+                return document.getElementById(id);
+            }
+            // 构造函数 创建放大镜类
+            function Zoom() {
+                this.zoomBox = iD("zoomBox");
+                this.midBox = iD("midBox");
+                this.midImg = this.midBox.children[0];
+                this.glass = iD("glass")
+                this.bigBox = iD("bigBox")
+                this.bigImg = this.bigBox.children[0]
+                this.smallBox = iD("smallBox");
+                this.smallImg = this.smallBox.children;
+    
+    
+            }
+            // 方法  里面绑定事件
+            Zoom.prototype.show = function () {
+                this.midBox.onmouseover = () => {
+                    this.glass.style.display = "block";
+                    this.bigBox.style.display = "block"
+                }
+                this.midBox.onmouseout = () => {
+                    this.glass.style.display = "none";
+                    this.bigBox.style.display = "none"
+                }
+                this.midBox.onmousemove = (e) => {
+                    var e = e || event;//兼容性
+                    // pageX 鼠标到页面距离，包含scroll
+                    // offsetX 鼠标相对于事件源位置
+                    var l = e.pageX - this.zoomBox.offsetLeft - this.glass.offsetWidth / 2;
+                    var t = e.pageY - this.zoomBox.offsetTop - this.glass.offsetHeight / 2;
+                    // 判定边界
+                    var mw = this.midBox.offsetWidth - this.glass.offsetWidth;
+                    var mh = this.midBox.offsetHeight - this.glass.offsetHeight;
+                    if (l <= 0) {
+                        l = 0
+                    } else if (l >= mw) {
+                        l = mw;
+                    }
+                    if (t <= 0) {
+                        t = 0
+                    } else if (t >= mh) {
+                        t = mh;
+                    }
+                    // l = l<= 0 ? 0 : l >= mw ? mw : l;
+                    // t = t<= 0 ? 0 : t >= mh ? mh:t;
+                    this.glass.style.top = t + "px"
+                    this.glass.style.left = l + "px"
+                    var r = this.midBox.offsetWidth / this.glass.offsetWidth
+                    // this.bigImg.style.left = -r * l + "px"
+                    // this.bigImg.style.top = -r * t + "px"
+                    this.bigImg.style.left = - this.glass.offsetLeft / this.midBox.offsetWidth * this.bigImg.offsetWidth + "px";
+    
+                     this.bigImg.style.top = - this.glass.offsetTop / this.midBox.offsetHeight * this.bigImg.offsetHeight + "px";
+    
+    
+                    // 小图改变，大图和midBox.src 改变
+                    for (let i = 0; i < this.smallImg.length; i++) {
+                        this.smallImg[i].onclick = () => {
+                            this.midImg.src = this.smallImg[i].src
+                            this.bigImg.src = this.smallImg[i].src
+                        }
+                    }
+                }
+               
+            }
+            var zoom1 = new Zoom();
+            zoom1.show();
+        </script>
 </body>
 
 </html>

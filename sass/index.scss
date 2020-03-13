@@ -12,8 +12,6 @@ li{
 img{
    vertical-align: middle;
 }
-
-
 /* header部分------------------------------------------------------------ */
 // header {
 //    height: 150px;
@@ -466,12 +464,13 @@ height: 100%;}
    margin: 0 20px;
 }
 .main .xinpin .goodList ul li{
-   width: 285px;
-   height: 345px;
+   width: 283px;
+   height: 343px;
    float: left;
    margin-bottom: 8px;
    margin-right: 5px;
    position: relative;
+   box-sizing: border-box;
 }
 .ellipsis{
    overflow: hidden;
@@ -597,11 +596,12 @@ color: #000;
    padding-top: 10px;
 }
 .main .jingpin .goodList ul li{
-   width: 285px;
-   height: 345px;
+   width: 283px;
+   height: 343px;
    float: left;
    margin-bottom: 8px;
    margin-right: 5px;
+   box-sizing: border-box;
 }
 .main .jingpin .goodList ul li:nth-of-type(1){
    width: 570px;

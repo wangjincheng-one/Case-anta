@@ -47,12 +47,12 @@ $(function () {
         for (let i in data.data) {
             str += `<li class="good-item" >
                 <div class="good-body" id ="good"  data-id="${data.data[i].pid}">
-                    <a href="#" class="pimg" data-id="${data.data[i].pid}">
+                    <a href="prodDetail.html?${data.data[i].pid}" class="pimg" data-id="${data.data[i].pid}">
                         <img  src="${data.data[i].pimg}"
                             alt="">
                     </a>
-                    <a href="#" class="pdesc" data-id="${data.data[i].pid}">${data.data[i].pdesc}</a>
-                    <a href="#" class="pprice" data-id="${data.data[i].pid}"><span>￥${data.data[i].pprice}</span></a>
+                    <a href="prodDetail.html?${data.data[i].pid}" class="pdesc" data-id="${data.data[i].pid}">${data.data[i].pdesc}</a>
+                    <a href="prodDetail.html?${data.data[i].pid}" class="pprice" data-id="${data.data[i].pid}"><span>￥${data.data[i].pprice}</span></a>
                 </div>
             </li>`
 
@@ -61,7 +61,7 @@ $(function () {
         $(".good-item").hover(function () {
             var index = $(this).index();
             $(".good-item").eq(index).find("#good").css({ border: "1px solid #f00", transform: "translateY(-10px)" })
-            console.log("enter")
+            // console.log("enter")
         }, function () {
             var index = $(this).index();
               
@@ -76,7 +76,7 @@ $(function () {
 
         // let goods = document.querySelectorAll(".good-item");
         $(".good-item #good").click(function () {
-            console.log($(this).attr("data-id"))
+            // console.log($(this).attr("data-id"))
 
 
             var productId = {};
@@ -85,7 +85,7 @@ $(function () {
 
             }
             localStorage.setItem("productId", JSON.stringify(productId));
-            location.href = "prodDetail.html";
+            // location.href = "prodDetail.html";
 
         })
     })

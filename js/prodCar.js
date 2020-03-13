@@ -10,14 +10,13 @@ $(function () {
     }).then(data => {
         // console.log(data)
         // console.log(data.data)//是个数组
-        for (let i in data.data) {
+        var str ="";
+        for (var i = 0;i< data.data.length;i++) {
             // console.log(data.data[i])
-            let str = `
-    <tr>
+             str += `
+    <tr >
         <td class="td-check">
-         <label class="checkbox-label checkbox-one">
-            <input type="checkbox" class=" ck">
-         </label>
+            <input type="checkbox" class="ck">
         </td>
         <td class="td-img">
          <a href="" title="">
@@ -36,203 +35,162 @@ $(function () {
                     </div>
                 </div>
               </div>
-            <div class="td-cont-bottom">
-                <p class="fl">
-                    <span>数量：</span>
-                    <span  class="num-minus">-</span>
-                <input type="text" class="num-input"  id="num" value="${data.data[i].pnum}">
-                    <span class="num-plus">+</span>
-
-                </p>
-                <p class="fr">
-                <a href="#" class="delete-one" id="delBtn">删除</a>
+        <div class="td-cont-bottom" data-id="${data.data[i].pid}">
+            <p class="fl"  >
+                <span>数量：</span>
+                <span class="num-minus">-</span>
+                <input type="text" class="num-input"   value="${data.data[i].pnum}">
+                <span class="num-plus">+</span>
+            </p>
+            <p class="fr" >
+                <a href="" class="delete-one" id="delBtn">删除</a>
                 </p>
             </div>
-
         </td>
     </tr>
-    
     `;
-    $(".cart-table").append(str);
+}//for 循环结束===============================================================
+    $(".cart-table").html(str);
     // 添加点击事件
-   
-    
-    }//for 循环结束
-    for (let i in $("tr").length) {
-        console.log(i)
-    }
-    $(" .num-minus").click(()=> {
-        let oNum = document.getElementById("num");
-        // $("#num").html($("#num").val() -1)  ;
-        // console.log($("#num").val() -1)
-        oNum.value--;
-        if (oNum.value <= 1) {
-            oNum.value = 1
+// 减号  数量减一
+    $(".num-minus").click((e)=> {
+        // console.log("jian")
+        let subNum = Number($(e.target).next().val())-1;
+        $(e.target).next().val(subNum)
+        $(this).next().val(subNum)
+        // console.log($(".num-minus").next().val(subNum))
+        if( $(e.target).next().val() <= 1){
+            $(e.target).next().val(1)
         }
-        console.log("jian")
-        $(this).val(oNum.value)
-        // oNum.value--;
-        // if (oNum.value <= 1) {
-        //     oNum.value = 1
-        // }
+        // $(this).parent().find("input").val()
+     $.get("http://jx.xuzhixiang.top/ap/api/cart-update-num.php",{
+            pid: $(".num-minus")
+                .parent().parent()
+                .attr("data-id"),
+            uid:uData.uid,
+            pnum: $("num-input").val() 
+        }).then(data=>{
+         console.log(data);
+     })
+    
     })
-$(".num-plus").click(() =>{
-        let oNum = document.getElementById("num");
-        oNum.value ++
-        console.log("jia")
-        $("#num").val(oNum.value)
+// 加号数量加一 
+    $(".num-plus").click((e) =>{
+        // console.log("jia")
+        // console.log($(".num-plus").prev().val())
+        // let indexNum = $(e.target).index();
+        // console.log(indexNum)
+
+        let subNum = Number($(e.target).prev().val()) + 1;
+        $(e.target).prev().val(subNum)
+        $.get("http://jx.xuzhixiang.top/ap/api/cart-update-num.php",{
+            pid: $(".num-plus")
+                .parent().parent()
+                .attr("data-id"),
+            uid:uData.uid,
+            pnum: $(".num-input").val() 
+        }).then(data=>{
+         console.log(data);//修改成功
+     })
+    })
+    // 操作 input
+    $(".num-input").change(function() {
+        $.get("http://jx.xuzhixiang.top/ap/api/cart-update-num.php", {
+            pid: $(".num-plus")
+            .parent().parent()
+            .attr("data-id"),
+        uid:uData.uid,
+        pnum: $(".num-input").val() 
+        }).then(data => {
+          console.log(data);
+        });
+      });
+// 删除 当前行============================
+    $("#delBtn").click(function (e) {
+        e.preventDefault();
+        // console.log($(this))
+        // $(this).parents().html("")
+        $.get("http://jx.xuzhixiang.top/ap/api/cart-delete.php",{
+        pid:$(this).parent().parent().attr("data-id"),
+        uid:uData.uid,
+        }).then(data=>{
+            console.log(data)
+    //    console.log( $(this).parent().parent().parent().parent())
+            $(this).parent().parent().parent().parent().remove();
+        })
+       
+        // console.log()
+    })
+    // var index = $(this).index()
+    //    $(".cart-table").children().eq(index).remove()
+   
+
+// 全选=========================================================================
+
+// console.log($("#checkAll"))
+$("#checkAll").click(function(){
+    if(this.checked){
+        // console.log($(".ck"))
+        $(".ck").prop("checked",true)
+    }else{
+        // console.log("noall")
+        $(".ck").prop("checked",false)
+    }
+})
+// console.log( $(".ck"))
+$(".ck").click(function(){
+    var j = 0;
+    $(".ck").map(function(){
+    if($(this).prop("checked")) {
+        j++
+    }
+    if(j == $(".ck").length){
+        $("#checkAll").prop("checked",true)
+    }else{
+        $("#checkAll").prop("checked",false)
+    }
+    })
+    if(j == 0){
+        $("#totalPrice").html(0);
+    }
+if(this.checked) {
+    // console.log("ck")
+}else if(!this.checked){
+    // console.log("no")
+}else{
+    // console.log("other")
+}
+})
+//------------------------页面总价显示函数---------------------
+    // var totalPrice = function(){
+    //     let addAll = 0
+    //     for(let i = 0; i < $(".ck").length; i++){
+    //         if($(".ck").eq(i).prop('checked')){
+    //             addAll += Number($(".perTotalPrice").eq(i).html());
+    //             $("#totalPrice").html(addAll)
+    //         }
+    //     }
+    // }
+    // console.log($(".checkbox-input").eq(1))
+    $(".checkbox-input").eq(1).click(function(){
+        // $(".ck").prop("checked",true)
+        // 
+        if(this.checked){
+            // console.log($(".ck"))
+            $(".ck").prop("checked",true)
+            $("#checkAll").prop("checked",true)
+        }else{
+            // console.log("noall")
+            $(".ck").prop("checked",false)
+            $("#checkAll").prop("checked",false)
+        }
 
     })
-    $("#delBtn").click(function () {
-        // $(this).parent().html("")
-       $(".cart-table").children().eq(i).remove()
-    })
-    
 })//then回调函数结束
 
 })
     
-    // function ShoppingCar() {
-    //     if (localStorage.getItem("carData")) {
-    //         this.carData = JSON.parse(localStorage.getItem("carData"))
-    //     } else {
-    //         this.carData = {};
-    //     }
-    // }
-    // // 存数据 存id num
-    // ShoppingCar.prototype.saveData = function (id, num, termi) {
-    //     if (this.carData[id] === undefined || termi) {
-    //         this.carData[id] = num;
     
-    //     }
-    //     else {
-    //         this.carData[id] += num;
-    //     }
-    //     localStorage.setItem("carData", JSON.stringify(this.carData))
-    // }
-    // ShoppingCar.prototype.showList = function () {
-    //     this.cartList = document.getElementById("cartList")
-    //     let productData = JSON.parse(localStorage.getItem("productDataNew"));
-    //     let str = "";
-    //     for (let id in this.carData) {
-    //         str += `
-    //     <li data-id="${id}">
-    //     <input type="checkbox" class="ck">
-    //     <img  src="${productData[id].imgsrc}">
-    //     <span>${productData[id].title}</span>
-    //     <span class="minus">-</span>
-    //     <input type="text" value="${this.carData[id]}" class="num">
-    //     <span class="plus">+</span>
-    //     <span class="price">${productData[id].price}</span>
-    //     <span class="perTotalPrice">${this.carData[id] * productData[id].price}</span>
-    //     <input type="button" value="删除" class="delBtn">
-    //     </li>
-    //     `;
-    //     }
-    //     this.cartList.innerHTML = str;
-    // }
-    // // 更新数据方法
-    // ShoppingCar.prototype.updateData = function () {
-    //     this.checkAll = document.getElementById("checkAll")
-    //     this.totalPrice = document.getElementById("totalPrice");
-    //     this.list = this.cartList.querySelectorAll("li")
-    //     this.ck = this.cartList.querySelectorAll(".ck")
-    //     this.minus = this.cartList.querySelectorAll(".minus")
-    //     this.plus = this.cartList.querySelectorAll(".plus")
-    //     this.num = this.cartList.querySelectorAll(".num")
-    //     this.price = this.cartList.querySelectorAll(".price")
-    //     this.perTotalPrice = this.cartList.querySelectorAll(".perTotalPrice");
-    
-    
-    //     for (let i = 0; i < this.minus.length; i++) {
-    //         this.minus[i].onclick = () => {
-    //             this.num[i].value--;
-    //             if (this.num[i].value <= 1) {
-    //                 this.num[i].value = 1;
-    //             }
-    //             update(i);
-    //             this.getTotalPrice();
-    //         }
-    
-    //         // 加号
-    //         this.plus[i].onclick = () => {
-    //             this.num[i].value++;
-    //             update(i);
-    //             this.getTotalPrice();
-    //         }
-    //         // 文本框添加事件
-    //         this.num[i].oninput = () => {
-    //             if (this.num[i].vlue <= 1) {
-    //                 this.num[i].value = 1;
-    //             }
-    //             update(i);
-    //             this.getTotalPrice();
-    
-    //         }
-    //         // 复选框
-    //         this.ck[i].onclick = () => {
-    //             let count = 0;
-    //             for (let j = 0; j < this.ck.length; j++) {
-    //                 if (this.ck[j].checked) {
-    //                     count++
-    //                 }
-    //             }
-    //             if (count === this.ck.length) {
-    //                 this.checkAll.checked = true;
-    //             } else {
-    //                 this.checkAll.checked = false;
-    //             }
-    //             this.getTotalPrice();
-    //         }
-    //     }
-    //     let update = (i) => {
-    //         this.perTotalPrice[i].innerText = this.num[i].value * this.price[i].innerText
-    //         let id = this.list[i].getAttribute("data-id")
-    //         let num = this.num[i].value;
-    //         this.saveData(id, num, true)
-    
-    //     }
-    //     this.checkAll.onclick = () => {
-    //         for (let i = 0; i < this.ck.length; i++) {
-    //             this.ck[i].checked = this.checkAll.checked;
-    //         }
-    //         this.getTotalPrice();
-    //     }
-    
-    // }
-    // ShoppingCar.prototype.getTotalPrice = function () {
-    //     let total = 0;
-    //     for (let i = 0; i < this.ck.length; i++) {
-    //         if (this.ck[i].checked) {
-    //             total += Number(this.perTotalPrice[i].innerText);
-    //         }
-    //     }
-    //     this.totalPrice.innerText = total;
-    // }
-    // ShoppingCar.prototype.removeData = function () {
-    //     // 获取删除按钮
-    //     this.delBtn = this.cartList.querySelectorAll(".delBtn")
-    //     for (let i = 0; i < this.delBtn.length; i++) {
-    //         this.delBtn[i].onclick = () => {
-    //             this.cartList.removeChild(this.list[i]);
-    //             this.ck[i].checked = false;
-    //             let id = this.list[i].getAttribute("data-id")
-    //             delete this.carData[id];
-    //             localStorage.setItem("carData", JSON.stringify(this.carData))
-    //             this.getTotalPrice();
-    //         }
-    //     }
-    // }  
-
-    // let shoppingCart = new ShoppingCart();
-    // shoppingCart.showList();
-    // shoppingCart.removeData();
-    // shoppingCart.updateData()
-
-
-
-
-
 
 
 
